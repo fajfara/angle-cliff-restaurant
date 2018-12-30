@@ -34,10 +34,15 @@
 .svg-shape{
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
 .svg-shape svg {
-  height: 100%;
-  z-index: 1;
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  top: -60%;
+  left: -15%;
 }
