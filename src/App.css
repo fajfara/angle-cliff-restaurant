@@ -9,6 +9,11 @@
   width: 215px;
 }
 
+.logo-and-menu{
+  position: relative;
+  z-index: 100;
+}
+
 .nav-links {
   list-style: none;
   padding: 0;
@@ -28,10 +33,11 @@
 
 .svg-shape{
   position: absolute;
+  top: 0;
   height: 100vh;
 }
 
-.svg-shape img{
+.svg-shape svg {
   height: 100%;
-  z-index: -1;
+  z-index: 1;
 }
