@@ -17,10 +17,11 @@
         top: -70%
         left: -25% */
 #svgBackground {
-  height: 200vh;
-  width: 200vw;
-  position: absolute;
-  top: -50%; }
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0; }
 
 .logo-and-menu {
   position: relative;
