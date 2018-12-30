@@ -1,48 +1,38 @@
 .App {
   height: 100vh;
-  background: url('./img/main-bg.jpg');
-  background-size: cover;
-}
+  background: url("./img/main-bg.jpg");
+  background-size: cover; }
 
+/* .svg-shape
+  position: absolute
+  top: 0
+  height: 100vh
+  width: 100vw
+  z-index: 1
 
-.logo {
-  width: 215px;
-}
+  svg
+        position: absolute
+        height: 200%
+        width: 200%
+        top: -70%
+        left: -25% */
+#svgBackground {
+  height: 200vh;
+  width: 200vw;
+  position: absolute;
+  top: -50%; }
 
-.logo-and-menu{
+.logo-and-menu {
   position: relative;
-  z-index: 100;
-}
-
-.nav-links {
-  list-style: none;
-  padding: 0;
-}
-
-.nav-links li {
-
-  display: inline-block;
-  padding: 0 2rem 0 2rem;
-
-}
-
-.nav-links li a {
-  color: #111;
-  text-decoration: none;
-}
-
-.svg-shape{
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-
-.svg-shape svg {
-  position: absolute;
-  height: 200%;
-  width: 200%;
-  top: -60%;
-  left: -15%;
-}
+  z-index: 100; }
+  .logo-and-menu .container .logo {
+    width: 215px; }
+  .logo-and-menu .container .main-menu .nav-links {
+    list-style: none;
+    padding: 0; }
+    .logo-and-menu .container .main-menu .nav-links li {
+      display: inline-block;
+      padding: 0 2rem 0 2rem; }
+      .logo-and-menu .container .main-menu .nav-links li a {
+        color: #111;
+        text-decoration: none; }
