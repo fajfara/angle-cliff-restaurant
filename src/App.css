@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Raleway:400,700,900");
 .App {
   height: 100vh;
   background: url("./img/main-bg.jpg");
@@ -36,4 +37,49 @@
       padding: 0 2rem 0 2rem; }
       .logo-and-menu .container .main-menu .nav-links li a {
         color: #111;
-        text-decoration: none; }
+        text-decoration: none;
+        font-weight: 700; }
+
+.welcome {
+  position: relative;
+  z-index: 100; }
+  .welcome .main-content {
+    margin-top: 4.5rem; }
+    .welcome .main-content--welcome-text h1 {
+      font-size: 100px;
+      font-family: "Playfair Display", serif; }
+    .welcome .main-content--button-area {
+      margin-top: 2rem; }
+      .welcome .main-content--button-area a {
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        color: #ffffff; }
+        .welcome .main-content--button-area a:hover {
+          text-decoration: none; }
+
+.button {
+  background-color: #0E1C32;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  color: #ffffff;
+  border: 2.5px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 60px;
+  padding: 1rem; }
+
+.footer {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; }
+  .footer-item {
+    color: #ffffff; }
+    .footer-item--main-text {
+      font-size: 50px;
+      font-weight: 700; }
+    .footer-item--sub-text {
+      margin-top: -1rem;
+      font-size: 16px; }
