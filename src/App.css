@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Raleway:400,700,900");
 .fade-enter {
   opacity: 0;
-  z-index: 1; }
+  z-index: 10000; }
   .fade-enter.fade-enter-active {
     opacity: 1;
     transition: opacity 250ms ease-in; }
