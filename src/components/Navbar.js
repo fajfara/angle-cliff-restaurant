@@ -9,7 +9,7 @@ const Navbar = () => {
                 <img src={logo} className="logo" alt="logo" />
                 <div className="main-menu">
                     <ul className="nav-links">
-                        <li><NavLink to="/">HOME</NavLink></li>
+                        <li><NavLink exact to="/">HOME</NavLink></li>
                         <li><NavLink to="/About">ABOUT</NavLink></li>
                         <li><a href="/">MENU</a></li>
                         <li><a href="/">CONTACT</a></li>

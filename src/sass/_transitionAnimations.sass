@@ -1,9 +1,22 @@
-.fade-enter
-    opacity: 0
-    z-index: 10000
-    &.fade-enter-active
-        opacity: 1
-        transition: opacity 250ms ease-in
+.fade-enter 
+  opacity: 0.01
+  transform: translateY(100rem)
+
+.fade-enter-active 
+  opacity: 1
+  transform: translateY(100rem)
+  transition: opacity 500ms ease-in
+
+.fade-exit 
+  opacity: 1
+  transform: translateY(100rem)
+
+.fade-exit-active 
+  opacity: 0.01
+  transform: translateY(100rem)
+  transition: opacity 500ms ease-in
+
+
 
 .active
     color: blue !important
