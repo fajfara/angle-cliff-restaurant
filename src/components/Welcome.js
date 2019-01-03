@@ -14,9 +14,7 @@ class Home extends Component {
                     </div>
 
                     <div className="main-content--button-area">
-                        <div className="button button-blue">
-                            <span><NavLink to="/TablePicker">MAKE A RESERVATION</NavLink></span>
-                        </div>
+                        <NavLink className="button" to="/TablePicker">MAKE A RESERVATION</NavLink>
                     </div>
                 </div>
             </div>
