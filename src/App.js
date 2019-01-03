@@ -5,6 +5,7 @@ import Welcome from './components/Welcome';
 import About from './components/About';
 import Footer from './components/Footer';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import anime from 'animejs';
 import './App.css';
 
@@ -45,11 +46,19 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <Switch>
-            <Route exact path='/' render={props => <Welcome playAnimation={this.playAnimation} />} />
-            <Route path='/TablePicker' render={props => <TablePicker playAnimation={this.playAnimation} />} />
-            <Route path='/about' render={props => <About playAnimation={this.playAnimation} />} />
-          </Switch>
+          <TransitionGroup>
+            <CSSTransition
+              timeout={300}
+              classNames="fade"
+
+            >
+              <Switch>
+                <Route exact path='/' render={props => <Welcome playAnimation={this.playAnimation} />} />
+                <Route path='/TablePicker' render={props => <TablePicker playAnimation={this.playAnimation} />} />
+                <Route path='/about' render={props => <About playAnimation={this.playAnimation} />} />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
           <Footer />
         </div>
       </BrowserRouter>

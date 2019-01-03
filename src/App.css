@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Raleway:400,700,900");
+.active {
+  color: blue !important; }
+
 .App {
   height: 100vh;
   background: url("./img/main-bg.jpg");
