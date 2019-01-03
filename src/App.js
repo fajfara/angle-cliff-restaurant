@@ -23,6 +23,7 @@ class App extends Component {
     if (routeName === '/TablePicker') {
       value = animeType.moveDown;
     }
+    anime.remove("html, body");
 
     const morphing = anime({
       targets: '#test',
