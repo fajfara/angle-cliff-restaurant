@@ -44,19 +44,26 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
-          <Navbar />
-          <TransitionGroup>
-            <CSSTransition timeout={300} classNames="fade">
-              <Switch>
-                <Route exact path='/' render={props => <Welcome playAnimation={this.playAnimation} />} />
-                <Route path='/TablePicker' render={props => <TablePicker playAnimation={this.playAnimation} />} />
-                <Route path='/about' render={props => <About playAnimation={this.playAnimation} />} />
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
-          <Footer />
-        </div>
+        <Route render={({ location }) =>
+          <div className="App">
+            <Navbar />
+            <TransitionGroup>
+              <CSSTransition
+                key={location.key}
+                timeout={300}
+                classNames="fade"
+
+              >
+                <Switch location={location}>
+                  <Route exact path='/' render={props => <Welcome playAnimation={this.playAnimation} />} />
+                  <Route path='/TablePicker' render={props => <TablePicker playAnimation={this.playAnimation} />} />
+                  <Route path='/about' render={props => <About playAnimation={this.playAnimation} />} />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+            <Footer />
+          </div>
+        } />
       </BrowserRouter>
     );
   }
