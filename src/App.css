@@ -58,7 +58,7 @@
           text-decoration: none; }
 
 .button {
-  background-color: #0E1C32;
+  background-color: rgba(14, 28, 50, 0.9);
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -67,7 +67,8 @@
   border: 2.5px solid #ffffff;
   box-sizing: border-box;
   border-radius: 60px;
-  padding: 1rem; }
+  padding: 1rem;
+  opacity: .9; }
 
 .footer {
   position: absolute;

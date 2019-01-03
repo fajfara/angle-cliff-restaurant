@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 
 class Footer extends Component {
     state = {
-        countupDuration: 3
+        countupDuration: 6
     }
     render() {
         return (
