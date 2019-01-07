@@ -1,24 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Raleway:400,700,900");
 .fade-enter {
   opacity: 0.01;
-  transform: translateY(100rem); }
+  z-index: 1000; }
 
-.fade-enter-active {
+.fade-enter.fade-enter-active {
   opacity: 1;
-  transform: translateY(100rem);
-  transition: opacity 500ms ease-in; }
+  transition: opacity 300ms ease-in; }
 
 .fade-exit {
   opacity: 1;
-  transform: translateY(100rem); }
+  z-index: 10; }
 
-.fade-exit-active {
+.fade-exit.fade-exit-active {
   opacity: 0.01;
-  transform: translateY(100rem);
-  transition: opacity 500ms ease-in; }
-
-.active {
-  color: blue !important; }
+  transition: opacity 300ms ease-in; }
 
 .App {
   height: 100vh;
@@ -90,6 +85,17 @@
   border-radius: 60px;
   padding: 1rem;
   opacity: .9; }
+
+.active {
+  color: blue !important; }
+
+.page {
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.hide {
+  display: none; }
 
 .footer {
   position: absolute;

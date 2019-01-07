@@ -5,7 +5,7 @@ class TablePicker extends Component {
     render() {
         this.props.playAnimation(window.location.pathname);
         return (
-            <div className="container text-center">
+            <div className="container text-center page">
 
                 <h4 className="center">
                     This is the Table picker page

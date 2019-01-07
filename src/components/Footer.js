@@ -6,8 +6,9 @@ class Footer extends Component {
         countupDuration: 6
     }
     render() {
+        this.props.logKey(this.props.location);
         return (
-            <div className="container footer text-center">
+            <div className="container footer text-center" id="footer">
                 <div className="row">
                     <div className="col"></div>
                     <div className="col footer-item">

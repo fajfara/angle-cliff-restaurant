@@ -7,7 +7,7 @@ class Home extends Component {
 
         this.props.playAnimation(window.location.pathname);
         return (
-            <div className="container text-center welcome">
+            <div className="container text-center welcome page">
                 <div className="main-content">
                     <div className="main-content--welcome-text">
                         <h1>Welcome</h1>
