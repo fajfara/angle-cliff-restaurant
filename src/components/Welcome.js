@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
+import Footer from './Footer';
 
 class Home extends Component {
 
@@ -17,7 +18,9 @@ class Home extends Component {
                         <NavLink className="button" to="/TablePicker">MAKE A RESERVATION</NavLink>
                     </div>
                 </div>
+                <Footer />
             </div>
+
         )
 
     }

@@ -5,8 +5,8 @@ class Footer extends Component {
     state = {
         countupDuration: 6
     }
+
     render() {
-        this.props.logKey(this.props.location);
         return (
             <div className="container footer text-center" id="footer">
                 <div className="row">

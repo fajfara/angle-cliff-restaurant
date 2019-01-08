@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import TablePicker from './components/TablePicker';
 import Welcome from './components/Welcome';
 import About from './components/About';
-import Footer from './components/Footer';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import anime from 'animejs';
@@ -41,13 +40,6 @@ class App extends Component {
     morphing.play();
   }
 
-  logKey(location) {
-    const footer = document.getElementById('footer');
-    console.log(footer);
-    if (location.pathname === '/About') {
-      footer.classList.add('hide');
-    }
-  }
 
 
   render() {
@@ -70,7 +62,7 @@ class App extends Component {
                   <Route path='/about' render={props => <About playAnimation={this.playAnimation} />} />
                 </Switch>
               </CSSTransition>
-              <Footer logKey={this.logKey} location={location} />
+
             </TransitionGroup>
           </div>
         } />

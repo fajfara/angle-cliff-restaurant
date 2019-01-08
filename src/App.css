@@ -98,7 +98,7 @@
   display: none; }
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 7%;
   left: 50%;
   transform: translateX(-50%);
@@ -111,3 +111,20 @@
     .footer-item--sub-text {
       margin-top: -1rem;
       font-size: 16px; }
+
+.social-links {
+  position: fixed;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; }
+  .social-links h2 {
+    color: #ffffff;
+    padding-bottom: 1rem;
+    font-size: 1.5rem; }
+  .social-links img {
+    width: 10%; }
+  .social-links .fb-img {
+    float: right; }
+  .social-links .insta-img {
+    float: left; }

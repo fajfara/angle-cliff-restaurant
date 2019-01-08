@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+import SocialLinks from './socialLinks';
 
 class About extends Component {
-
 
     render() {
         this.props.playAnimation(window.location.pathname);
@@ -14,6 +14,7 @@ class About extends Component {
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsa id sapiente minus aliquid reprehenderit consequatur libero eos totam, nihil provident praesentium ullam natus. Modi perspiciatis porro cum dolorum ea.
                 </p>
+                <SocialLinks />
             </div>
         )
     }
