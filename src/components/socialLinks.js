@@ -10,10 +10,10 @@ class SocialLinks extends Component {
                 <h2>Learn more about us:</h2>
                 <div className="row">
                     <div className="col">
-                        <img className="fb-img" src={facebookIcon} alt="facebook icon" />
+                        <img className="fb-img socialIcons" src={facebookIcon} alt="facebook icon" />
                     </div>
                     <div className="col">
-                        <img className="insta-img" src={instagramIcon} alt="facebook icon" />
+                        <img className="insta-img socialIcons" src={instagramIcon} alt="facebook icon" />
                     </div>
                 </div>
             </div>

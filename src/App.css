@@ -15,64 +15,6 @@
   opacity: 0.01;
   transition: opacity 300ms ease-in; }
 
-.App {
-  height: 100vh;
-  background: url("./img/main-bg.jpg");
-  background-size: cover; }
-
-/* .svg-shape
-  position: absolute
-  top: 0
-  height: 100vh
-  width: 100vw
-  z-index: 1
-
-  svg
-        position: absolute
-        height: 200%
-        width: 200%
-        top: -70%
-        left: -25% */
-#svgBackground {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0; }
-
-.logo-and-menu {
-  position: relative;
-  z-index: 100; }
-  .logo-and-menu .container .logo {
-    width: 215px; }
-  .logo-and-menu .container .main-menu .nav-links {
-    list-style: none;
-    padding: 0; }
-    .logo-and-menu .container .main-menu .nav-links li {
-      display: inline-block;
-      padding: 0 2rem 0 2rem; }
-      .logo-and-menu .container .main-menu .nav-links li a {
-        color: #111;
-        text-decoration: none;
-        font-weight: 700; }
-
-.welcome {
-  position: relative;
-  z-index: 100; }
-  .welcome .main-content {
-    margin-top: 4.5rem; }
-    .welcome .main-content--welcome-text h1 {
-      font-size: 100px;
-      font-family: "Playfair Display", serif; }
-    .welcome .main-content--button-area {
-      margin-top: 2rem; }
-      .welcome .main-content--button-area a {
-        font-family: "Raleway", sans-serif;
-        font-size: 16px;
-        color: #ffffff; }
-        .welcome .main-content--button-area a:hover {
-          text-decoration: none; }
-
 .button {
   background-color: rgba(14, 28, 50, 0.9);
   display: inline-block;
@@ -97,21 +39,6 @@
 .hide {
   display: none; }
 
-.footer {
-  position: fixed;
-  bottom: 7%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100; }
-  .footer-item {
-    color: #ffffff; }
-    .footer-item--main-text {
-      font-size: 50px;
-      font-weight: 700; }
-    .footer-item--sub-text {
-      margin-top: -1rem;
-      font-size: 16px; }
-
 .social-links {
   position: fixed;
   bottom: 7%;
@@ -128,3 +55,100 @@
     float: right; }
   .social-links .insta-img {
     float: left; }
+  .social-links .socialIcons {
+    opacity: 0; }
+
+/* .svg-shape
+  position: absolute
+  top: 0
+  height: 100vh
+  width: 100vw
+  z-index: 1
+
+  svg
+        position: absolute
+        height: 200%
+        width: 200%
+        top: -70%
+        left: -25% */
+#svgBackground {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.App {
+  height: 100vh;
+  background: url("./img/main-bg.jpg");
+  background-size: cover; }
+
+.logo-and-menu {
+  position: relative;
+  z-index: 100; }
+  .logo-and-menu .container .logo {
+    width: 215px; }
+  .logo-and-menu .container .main-menu .nav-links {
+    list-style: none;
+    padding: 0; }
+    .logo-and-menu .container .main-menu .nav-links li {
+      display: inline-block;
+      padding: 0 2rem 0 2rem; }
+      .logo-and-menu .container .main-menu .nav-links li a {
+        color: #111;
+        text-decoration: none;
+        font-weight: 700; }
+
+.welcome {
+  position: absolute;
+  z-index: 100; }
+  .welcome .main-content {
+    margin-top: 4.5rem; }
+    .welcome .main-content--welcome-text h1 {
+      font-size: 100px;
+      font-family: "Playfair Display", serif; }
+    .welcome .main-content--button-area {
+      margin-top: 2rem; }
+      .welcome .main-content--button-area a {
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        color: #ffffff; }
+        .welcome .main-content--button-area a:hover {
+          text-decoration: none; }
+
+.about-us--title {
+  margin-top: 3rem;
+  margin-bottom: 2rem; }
+
+.about-us--main-content {
+  position: absolute;
+  z-index: 100; }
+  .about-us--main-content p {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem; }
+  .about-us--main-content a {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: #ffffff; }
+    .about-us--main-content a:hover {
+      text-decoration: none; }
+  .about-us--main-content--buttons--make-res {
+    float: right; }
+  .about-us--main-content--buttons--location {
+    float: left; }
+
+.footer {
+  position: fixed;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; }
+  .footer-item {
+    color: #ffffff; }
+    .footer-item--main-text {
+      font-size: 50px;
+      font-weight: 700; }
+    .footer-item--sub-text {
+      margin-top: -1rem;
+      font-size: 16px; }

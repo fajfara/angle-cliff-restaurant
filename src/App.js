@@ -40,6 +40,23 @@ class App extends Component {
     morphing.play();
   }
 
+  socialLinksAnimation() {
+    anime.remove("html, body");
+    const show = anime({
+      targets: '.socialIcons',
+      opacity: [
+        { value: 0, duration: 500 },
+        { value: 1, duration: 500 }
+      ],
+      translateY: [
+        { value: 125, duration: 500 },
+        { value: 0, duration: 500 }
+      ],
+      easing: 'easeOutExpo'
+    });
+    show.play();
+  }
+
 
 
   render() {
@@ -59,7 +76,7 @@ class App extends Component {
                 <Switch location={location}>
                   <Route exact path='/' render={props => <Welcome playAnimation={this.playAnimation} />} />
                   <Route path='/TablePicker' render={props => <TablePicker playAnimation={this.playAnimation} />} />
-                  <Route path='/about' render={props => <About playAnimation={this.playAnimation} />} />
+                  <Route path='/about' render={props => <About socialLinksAnimation={this.socialLinksAnimation} playAnimation={this.playAnimation} />} />
                 </Switch>
               </CSSTransition>
 
