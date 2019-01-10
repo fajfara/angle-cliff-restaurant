@@ -13,7 +13,17 @@
 
 
 .active
-    color: blue !important
+    position: relative;
+    &:after
+        content: ''
+        width: 130%
+        border-bottom: solid 2px rgba(0,0,0,0.3)
+        position: absolute
+        left: -15%
+        top: 130%
+        z-index: 1
+        opacity: 0.7
+
 
 .page
     position: absolute
@@ -22,3 +32,6 @@
 
 .hide
     display: none
+
+.blur-5
+    filter: blur(4px)

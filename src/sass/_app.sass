@@ -1,4 +1,22 @@
 .App
     height: 100vh
-    background: url('./img/main-bg.jpg');
-    background-size: cover;
+
+    .background-img
+        position: absolute
+        width: 100vw
+        height: 100vh
+        background: url('./img/main-bg-2.jpg')
+        background-size: cover
+        background-position-x: 10rem
+        transition: 0.5s
+
+.newBg
+    background: url('./img/32.jpg') !important
+    background-size: cover
+
+.app-container
+    position: absolute
+    z-index: 1001
+    top: 31%
+    -webkit-transform: translateY(-50%)
+    width: 100vw

@@ -29,7 +29,16 @@
   opacity: .9; }
 
 .active {
-  color: blue !important; }
+  position: relative; }
+  .active:after {
+    content: '';
+    width: 130%;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: -15%;
+    top: 130%;
+    z-index: 1;
+    opacity: 0.7; }
 
 .page {
   position: absolute;
@@ -38,6 +47,9 @@
 
 .hide {
   display: none; }
+
+.blur-5 {
+  filter: blur(4px); }
 
 .social-links {
   position: fixed;
@@ -79,12 +91,30 @@
   left: 0; }
 
 .App {
-  height: 100vh;
-  background: url("./img/main-bg.jpg");
+  height: 100vh; }
+  .App .background-img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url("./img/main-bg-2.jpg");
+    background-size: cover;
+    background-position-x: 10rem;
+    transition: 0.5s; }
+
+.newBg {
+  background: url("./img/32.jpg") !important;
   background-size: cover; }
+
+.app-container {
+  position: absolute;
+  z-index: 1001;
+  top: 31%;
+  -webkit-transform: translateY(-50%);
+  width: 100vw; }
 
 .logo-and-menu {
   position: relative;
+  top: 5%;
   z-index: 100; }
   .logo-and-menu .container .logo {
     width: 215px; }
@@ -97,7 +127,8 @@
       .logo-and-menu .container .main-menu .nav-links li a {
         color: #111;
         text-decoration: none;
-        font-weight: 700; }
+        font-weight: 700;
+        transition: 0.5s; }
 
 .welcome {
   position: absolute;
@@ -139,11 +170,11 @@
     float: left; }
 
 .footer {
+  z-index: 100;
   position: fixed;
-  bottom: 7%;
+  bottom: 10%;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 100; }
+  transform: translateX(-50%); }
   .footer-item {
     color: #ffffff; }
     .footer-item--main-text {

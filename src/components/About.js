@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import SocialLinks from './socialLinks';
 import { Link } from 'react-router-dom';
 
 class About extends Component {
-
-    render() {
+    componentDidMount() {
         this.props.playAnimation(window.location.pathname);
         this.props.socialLinksAnimation();
+        this.props.applyBlur5();
+    }
+
+    render() {
+
         return (
             <div className="container about-us text-center page">
 
@@ -14,6 +17,7 @@ class About extends Component {
                     About us
                 </h4>
                 <div className="about-us--main-content">
+
                     <p>
                         We are a small, private restaurant on the Baleares Islands, south of Spain. We pride ourselfs on our premium, elegant service. Every customer that leaves our restaurant is filled with joy.
                         We serve a lot of different kind of dishes, but majority of our menu is composed of Spanish dishes. We are an affordable premium restaurant, with a view that can't be rivaled.
@@ -29,7 +33,6 @@ class About extends Component {
                         </div>
                     </div>
                 </div>
-                <SocialLinks />
             </div>
         )
     }

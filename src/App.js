@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import TablePicker from './components/TablePicker';
 import Welcome from './components/Welcome';
 import About from './components/About';
+import Footer from './components/Footer';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import anime from 'animejs';
@@ -10,6 +11,11 @@ import './App.css';
 
 
 class App extends Component {
+  state = {
+    blurApplied: false
+  }
+
+
 
   playAnimation(routeName) {
 
@@ -58,29 +64,50 @@ class App extends Component {
   }
 
 
+  applyBlur5() {
+    // const mainBg = document.querySelector('.background-img');
+    console.log(this.state);
+    /* if (this.state.blurApplied === 'true') {
+      mainBg.classList.remove('blur-5');
+      this.setState = ({
+        blurApplied: false
+      })
+    } else {
+      mainBg.classList.add('blur-5');
+      this.setState = ({
+        blurApplied: true
+      })
+    } */
+  }
+
+
 
   render() {
     return (
       <BrowserRouter>
         <Route render={({ location }) =>
           <div className="App">
+            <div className="background-img">
+
+            </div>
             <Navbar />
-            <TransitionGroup>
-              <CSSTransition
-                key={location.key}
-                timeout={{ enter: 300, exit: 300 }}
-                classNames="fade"
-                unmountOnExit
-
-              >
-                <Switch location={location}>
-                  <Route exact path='/' render={props => <Welcome playAnimation={this.playAnimation} />} />
-                  <Route path='/TablePicker' render={props => <TablePicker playAnimation={this.playAnimation} />} />
-                  <Route path='/about' render={props => <About socialLinksAnimation={this.socialLinksAnimation} playAnimation={this.playAnimation} />} />
-                </Switch>
-              </CSSTransition>
-
-            </TransitionGroup>
+            <div className="app-container">
+              <TransitionGroup>
+                <CSSTransition
+                  key={location.key}
+                  timeout={{ enter: 300, exit: 300 }}
+                  classNames="fade"
+                  unmountOnExit
+                >
+                  <Switch location={location}>
+                    <Route exact path='/' render={props => <Welcome playAnimation={this.playAnimation} />} />
+                    <Route path='/TablePicker' render={props => <TablePicker playAnimation={this.playAnimation} />} />
+                    <Route path='/about' render={props => <About applyBlur5={this.applyBlur5} socialLinksAnimation={this.socialLinksAnimation} playAnimation={this.playAnimation} />} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            </div>
+            <Footer />
           </div>
         } />
       </BrowserRouter>

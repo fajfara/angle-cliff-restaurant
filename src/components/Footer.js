@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import CountUp from 'react-countup';
+import SocialLinks from './socialLinks';
 
 class Footer extends Component {
     state = {
         countupDuration: 6
     }
 
-    render() {
-        return (
-            <div className="container footer text-center" id="footer">
+    socialLinksRender(pathname) {
+        if (pathname === '/About') {
+            return (
+                <SocialLinks />
+            )
+        } else if (pathname === '/TablePicker') {
+            return (
+                null
+            )
+        }
+        else {
+            return (
                 <div className="row">
                     <div className="col"></div>
                     <div className="col footer-item">
@@ -48,6 +58,14 @@ class Footer extends Component {
                     </div>
                     <div className="col footer-item"></div>
                 </div>
+            )
+        }
+    }
+
+    render() {
+        return (
+            <div className="container footer text-center" id="footer">
+                {this.socialLinksRender(window.location.pathname)}
             </div>
         )
     }
