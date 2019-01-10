@@ -64,9 +64,12 @@
   .social-links img {
     width: 10%; }
   .social-links .fb-img {
-    float: right; }
+    float: right;
+    background: #fff; }
   .social-links .insta-img {
-    float: left; }
+    float: left;
+    background: #fff;
+    border-radius: 20px; }
   .social-links .socialIcons {
     opacity: 0; }
 
