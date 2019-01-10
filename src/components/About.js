@@ -3,9 +3,19 @@ import { Link } from 'react-router-dom';
 
 class About extends Component {
     componentDidMount() {
+        // TODO the blur for bg need to be refactored, redux?
+        const mainBg = document.querySelector('.background-img');
+        mainBg.classList.add('blur-5');
+
         this.props.playAnimation(window.location.pathname);
         this.props.socialLinksAnimation();
-        this.props.applyBlur5();
+
+    }
+
+    componentWillUnmount() {
+        // TODO the blur for bg need to be refactored, redux?
+        const mainBg = document.querySelector('.background-img');
+        mainBg.classList.remove('blur-5');
     }
 
     render() {
