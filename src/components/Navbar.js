@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from '../img/logo.svg';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <div className="logo-and-menu container text-center">
             <div className="container">
-                <img src={logo} className="logo" alt="logo" />
+                <Link to="/">
+                    <img src={logo} className="logo" alt="logo" />
+                </Link>
                 <div className="main-menu">
                     <ul className="nav-links">
                         <li><NavLink exact to="/">HOME</NavLink></li>

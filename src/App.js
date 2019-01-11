@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
+
 import Navbar from './components/Navbar';
 import TablePicker from './components/TablePicker';
 import Welcome from './components/Welcome';
@@ -14,9 +15,6 @@ import './App.css';
 
 
 class App extends Component {
-  state = {
-    blurApplied: false
-  }
 
 
 
@@ -68,6 +66,16 @@ class App extends Component {
     show.play();
   }
 
+  applyBlur = () => {
+    const mainBg = document.querySelector('.background-img');
+    mainBg.classList.add('blur-5');
+  }
+
+  removeBlur = () => {
+    const mainBg = document.querySelector('.background-img');
+    mainBg.classList.remove('blur-5');
+  }
+
 
 
 
@@ -93,7 +101,7 @@ class App extends Component {
                   <Switch location={location}>
                     <Route exact path='/' render={props => <Welcome playAnimation={this.playAnimation} />} />
                     <Route path='/TablePicker' render={props => <TablePicker playAnimation={this.playAnimation} />} />
-                    <Route path='/about' render={props => <About socialLinksAnimation={this.socialLinksAnimation} playAnimation={this.playAnimation} />} />
+                    <Route path='/about' render={props => <About removeBlur={this.removeBlur} applyBlur={this.applyBlur} socialLinksAnimation={this.socialLinksAnimation} playAnimation={this.playAnimation} />} />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
