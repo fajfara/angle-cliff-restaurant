@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
 class TablePicker extends Component {
-
-    render() {
+    componentWillMount() {
         this.props.playAnimation(window.location.pathname);
+    }
+    render() {
+
         return (
             <div className="container text-center page">
 

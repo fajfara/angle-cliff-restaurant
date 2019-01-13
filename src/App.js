@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 
 import anime from 'animejs';
 import './App.css';
+import FoodMenu from './components/FoodMenu';
 
 
 class App extends Component {
@@ -22,20 +23,19 @@ class App extends Component {
 
   playAnimation(routeName) {
 
-    anime.remove("html, body");
+    anime.remove("html body .food-menu-svg #pathAnimate #svgBackground");
     const animeType = {
       'moveUp': 'M497.6,0c-261.7,228.1-354.5,593.4-75.9,762.1s400.5-89,998.6,151.2c478.5,192.1,499.7,163.2,499.7,163.2v3.5c0,0-1910.5,5.1-1920,0V345.3V0',
       'moveDown': 'M497.6,0c-261.7,228.1-338.9,942.1-60.3,1110.7s400.5-89,998.6,151.2c478.5,192.1,484.1-185.4,484.1-185.4v3.5c0,0-1910.5,5.1-1920,0V345.3V0'
     }
     let value = animeType.moveUp;
 
-    if (routeName === '/TablePicker') {
+    if (routeName === '/TablePicker' || routeName === '/Food-menu') {
       value = animeType.moveDown;
     }
 
-
     const morphing = anime({
-      targets: '#test',
+      targets: '#pathAnimate',
       d: [
         { value: value }
       ],
@@ -50,7 +50,7 @@ class App extends Component {
   }
 
   socialLinksAnimation() {
-    anime.remove("html, body");
+    anime.remove("html body .food-menu-svg #pathAnimate");
     const show = anime({
       targets: '.socialIcons',
       opacity: [
@@ -102,6 +102,7 @@ class App extends Component {
                     <Route exact path='/' render={props => <Welcome playAnimation={this.playAnimation} />} />
                     <Route path='/TablePicker' render={props => <TablePicker playAnimation={this.playAnimation} />} />
                     <Route path='/about' render={props => <About removeBlur={this.removeBlur} applyBlur={this.applyBlur} socialLinksAnimation={this.socialLinksAnimation} playAnimation={this.playAnimation} />} />
+                    <Route path='/food-menu' render={props => <FoodMenu removeBlur={this.removeBlur} applyBlur={this.applyBlur} playAnimation={this.playAnimation} />} />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>

@@ -209,10 +209,22 @@
     .about-us--main-content--buttons--location {
       float: left; }
 
+.food-menu-svg {
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(125px);
+  margin-top: 2rem;
+  opacity: 0; }
+  .food-menu-svg:hover {
+    cursor: pointer; }
+  .food-menu-svg img {
+    width: 100%; }
+
 .footer {
   z-index: 100;
   position: fixed;
-  bottom: 10%;
+  bottom: 8%;
   left: 50%;
   transform: translateX(-50%); }
   .footer-item {

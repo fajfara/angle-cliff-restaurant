@@ -7,12 +7,12 @@ class Footer extends Component {
         countupDuration: 6
     }
 
-    socialLinksRender(pathname) {
+    footerRenderer(pathname) {
         if (pathname === '/About') {
             return (
                 <SocialLinks />
             )
-        } else if (pathname === '/TablePicker') {
+        } else if (pathname === '/TablePicker' || pathname === '/Food-menu') {
             return (
                 null
             )
@@ -65,7 +65,7 @@ class Footer extends Component {
     render() {
         return (
             <div className="container footer text-center" id="footer">
-                {this.socialLinksRender(window.location.pathname)}
+                {this.footerRenderer(window.location.pathname)}
             </div>
         )
     }
