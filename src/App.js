@@ -66,12 +66,12 @@ class App extends Component {
     show.play();
   }
 
-  applyBlur = () => {
+  applyBlur() {
     const mainBg = document.querySelector('.background-img');
     mainBg.classList.add('blur-5');
   }
 
-  removeBlur = () => {
+  removeBlur() {
     const mainBg = document.querySelector('.background-img');
     mainBg.classList.remove('blur-5');
   }

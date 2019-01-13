@@ -22,11 +22,13 @@
   vertical-align: middle;
   user-select: none;
   color: #ffffff;
-  border: 2.5px solid #ffffff;
   box-sizing: border-box;
-  border-radius: 60px;
   padding: 1rem;
-  opacity: .9; }
+  opacity: .9;
+  transition: 0.5s; }
+  .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
 .active {
   position: relative; }
@@ -103,6 +105,25 @@
     background-size: cover;
     background-position-x: 10rem;
     transition: 0.5s; }
+    @media screen and (max-width: 1600px) {
+      .App .background-img {
+        background-position-y: 4rem; } }
+    @media screen and (max-width: 1400px) {
+      .App .background-img {
+        background-position-x: 7rem;
+        background-position-y: 5rem; } }
+    @media screen and (max-width: 1300px) {
+      .App .background-img {
+        background-position-x: 2rem; } }
+    @media screen and (max-width: 1200px) {
+      .App .background-img {
+        background-position-x: -1rem; } }
+    @media screen and (max-width: 1100px) {
+      .App .background-img {
+        background-position-x: -3rem; } }
+    @media screen and (max-width: 1000px) {
+      .App .background-img {
+        background-position-x: -7rem; } }
 
 .newBg {
   background: url("./img/32.jpg") !important;
@@ -153,6 +174,11 @@
 .about-us--title {
   margin-top: 3rem;
   margin-bottom: 2rem; }
+  @media screen and (max-height: 800px) {
+    .about-us--title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      margin-top: 5rem; } }
 
 .about-us--main-content {
   position: absolute;
@@ -161,16 +187,27 @@
     width: 50%;
     margin: 0 auto;
     margin-bottom: 2rem; }
+    @media screen and (max-height: 800px) {
+      .about-us--main-content p {
+        font-size: 0.8rem; } }
   .about-us--main-content a {
     font-family: "Raleway", sans-serif;
     font-size: 16px;
     color: #ffffff; }
+    @media screen and (max-height: 800px) {
+      .about-us--main-content a {
+        font-size: 0.8rem; } }
     .about-us--main-content a:hover {
       text-decoration: none; }
-  .about-us--main-content--buttons--make-res {
-    float: right; }
-  .about-us--main-content--buttons--location {
-    float: left; }
+  .about-us--main-content--buttons {
+    margin-top: 47px; }
+    @media screen and (max-height: 800px) {
+      .about-us--main-content--buttons {
+        margin-top: 0; } }
+    .about-us--main-content--buttons--make-res {
+      float: right; }
+    .about-us--main-content--buttons--location {
+      float: left; }
 
 .footer {
   z-index: 100;
