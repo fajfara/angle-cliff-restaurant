@@ -5,7 +5,7 @@ import anime from 'animejs';
 export class FoodMenu extends Component {
 
     animateMenuOnLoad = () => {
-        anime.remove("html body .food-menu-svg #pathAnimate");
+        anime.remove(".food-menu-svg");
         const show = anime({
             targets: '.food-menu-svg',
             opacity: [
@@ -25,34 +25,16 @@ export class FoodMenu extends Component {
         show.play();
     }
 
-    animateMenuOnExit = () => {
-        anime.remove("html body .food-menu-svg #pathAnimate");
-        const show = anime({
-            targets: '.food-menu-svg',
-            translateY: [
-                { value: 0, duration: 700 },
-                { value: 1000, duration: 700 }
-            ],
-            translateX: [
-                { value: '-50%', duration: 500 },
-                { value: '-50%', duration: 500 }
-            ],
-            easing: 'easeOutExpo'
-        });
-        show.play();
-    }
+
 
     componentWillMount() {
+        anime.remove("#pathAnimate #svgBackground");
         this.props.playAnimation(window.location.pathname);
 
     }
 
     componentDidMount() {
         this.animateMenuOnLoad();
-    }
-
-    componentWillUnmount() {
-        this.animateMenuOnExit();
     }
     render() {
         return (

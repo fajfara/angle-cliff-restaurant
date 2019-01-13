@@ -23,7 +23,7 @@ class App extends Component {
 
   playAnimation(routeName) {
 
-    anime.remove("html body .food-menu-svg #pathAnimate #svgBackground");
+    anime.remove("#pathAnimate #svgBackground");
     const animeType = {
       'moveUp': 'M497.6,0c-261.7,228.1-354.5,593.4-75.9,762.1s400.5-89,998.6,151.2c478.5,192.1,499.7,163.2,499.7,163.2v3.5c0,0-1910.5,5.1-1920,0V345.3V0',
       'moveDown': 'M497.6,0c-261.7,228.1-338.9,942.1-60.3,1110.7s400.5-89,998.6,151.2c478.5,192.1,484.1-185.4,484.1-185.4v3.5c0,0-1910.5,5.1-1920,0V345.3V0'
@@ -50,7 +50,7 @@ class App extends Component {
   }
 
   socialLinksAnimation() {
-    anime.remove("html body .food-menu-svg #pathAnimate");
+    anime.remove("socialIcons");
     const show = anime({
       targets: '.socialIcons',
       opacity: [
