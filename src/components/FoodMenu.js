@@ -1,47 +1,37 @@
 import React, { Component } from 'react';
-import MenuFrontPage from '../img/svgs/food-menu.svg';
-import anime from 'animejs';
+import frontMenuPage from '../img/svgs/food-menu.svg';
+import backMenuPage from '../img/svgs/food-menu-backside.svg';
 
 export class FoodMenu extends Component {
-
-    animateMenuOnLoad = () => {
-        anime.remove(".food-menu-svg");
-        const show = anime({
-            targets: '.food-menu-svg',
-            opacity: [
-                { value: 0, duration: 500 },
-                { value: 1, duration: 500 }
-            ],
-            translateY: [
-                { value: 1000, duration: 700 },
-                { value: 0, duration: 700 }
-            ],
-            translateX: [
-                { value: '-50%', duration: 500 },
-                { value: '-50%', duration: 500 }
-            ],
-            easing: 'easeOutExpo'
-        });
-        show.play();
-    }
 
 
 
     componentWillMount() {
-        anime.remove("#pathAnimate #svgBackground");
         this.props.playAnimation(window.location.pathname);
 
-    }
-
-    componentDidMount() {
-        this.animateMenuOnLoad();
     }
     render() {
         return (
             <div className="container food-menu text-center page" id="foodMenu">
-                <div className="food-menu-svg">
-                    <img src={MenuFrontPage} className="food-menu-svg-front" alt="Please check your connection" />
-                </div>
+                <label>
+                    <input type="checkbox" />
+                    <div className="card">
+                        <div className="front">
+                            <img src={frontMenuPage} className="logo" alt="logo" />
+                        </div>
+                        <div className="back">
+                            <img src={backMenuPage} className="logo" alt="logo" />
+                            <div className="back--content">
+                                <h1>First item</h1>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quis vel sunt accusantium quo ducimus aperiam odio voluptates facere ipsum autem sequi non minus quisquam illo at voluptatum veniam,
+                                    nihil adipisci.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </label>
             </div>
         )
     }
