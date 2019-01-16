@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
+
 import Navbar from './components/Navbar';
 import TablePicker from './components/TablePicker';
 import Welcome from './components/Welcome';
@@ -13,7 +14,7 @@ import Footer from './components/Footer';
 import anime from 'animejs';
 import './App.css';
 import FoodMenu from './components/FoodMenu';
-
+import Location from './components/Map';
 
 class App extends Component {
 
@@ -102,7 +103,8 @@ class App extends Component {
                     <Route exact path='/' render={props => <Welcome playAnimation={this.playAnimation} />} />
                     <Route path='/TablePicker' render={props => <TablePicker playAnimation={this.playAnimation} />} />
                     <Route path='/about' render={props => <About removeBlur={this.removeBlur} applyBlur={this.applyBlur} socialLinksAnimation={this.socialLinksAnimation} playAnimation={this.playAnimation} />} />
-                    <Route path='/food-menu' render={props => <FoodMenu removeBlur={this.removeBlur} applyBlur={this.applyBlur} playAnimation={this.playAnimation} />} />
+                    <Route path='/food-menu' render={props => <FoodMenu playAnimation={this.playAnimation} />} />
+                    <Route path='/Location' render={props => <Location />} />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>

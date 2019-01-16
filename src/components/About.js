@@ -34,7 +34,7 @@ class About extends Component {
                                 <Link className="button about-us--main-content--buttons--make-res" to="/TablePicker">MAKE A RESERVATION</Link>
                             </div>
                             <div className="col">
-                                <Link className="button about-us--main-content--buttons--location" to="/">SEE OUR LOCATION</Link>
+                                <Link className="button about-us--main-content--buttons--location" to="/Location">SEE OUR LOCATION</Link>
                             </div>
                         </div>
                     </div>

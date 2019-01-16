@@ -16,6 +16,26 @@ class Footer extends Component {
             return (
                 null
             )
+        } else if (pathname === '/Location') {
+            return (
+                <div className="row">
+                    <div className="col location--footer">
+                        <p>
+                            Carrer Coves, 37
+                        </p>
+                        <p>
+                            07589 Capdepera
+                        </p>
+                        <p>
+                            Illes Balears
+                        </p>
+                        <p>
+                            Spain
+                        </p>
+
+                    </div>
+                </div>
+            )
         }
         else {
             return (
