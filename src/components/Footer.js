@@ -12,7 +12,7 @@ class Footer extends Component {
             return (
                 <SocialLinks />
             )
-        } else if (pathname === '/TablePicker' || pathname === '/Food-menu') {
+        } else if (pathname === '/TablePicker' || pathname === '/Food-menu' || pathname === '/Contact') {
             return (
                 null
             )

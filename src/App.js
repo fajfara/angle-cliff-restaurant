@@ -15,6 +15,7 @@ import anime from 'animejs';
 import './App.css';
 import FoodMenu from './components/FoodMenu';
 import Location from './components/Map';
+import Contact from './components/Contact';
 
 class App extends Component {
 
@@ -105,6 +106,8 @@ class App extends Component {
                     <Route path='/about' render={props => <About removeBlur={this.removeBlur} applyBlur={this.applyBlur} socialLinksAnimation={this.socialLinksAnimation} playAnimation={this.playAnimation} />} />
                     <Route path='/food-menu' render={props => <FoodMenu playAnimation={this.playAnimation} />} />
                     <Route path='/Location' render={props => <Location />} />
+                    <Route path='/Contact' render={props => <Contact playAnimation={this.playAnimation} />} />
+
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
