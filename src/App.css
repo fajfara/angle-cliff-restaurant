@@ -163,7 +163,7 @@ body {
 .logo-and-menu {
   position: relative;
   top: 5%;
-  z-index: 1002; }
+  z-index: 10; }
   .logo-and-menu .container .logo {
     width: 215px; }
   .logo-and-menu .container .main-menu .nav-links {
@@ -317,16 +317,25 @@ input {
   transform: translateX(-50%); }
   .contact-us h1 {
     margin-top: 5rem; }
+  .contact-us label {
+    height: 100%;
+    width: 50%; }
   .contact-us .submit-form-button {
     background-color: #ffffff;
     color: rgba(14, 28, 50, 0.9);
     position: absolute;
-    top: 380%;
+    top: 140%;
     left: 50%;
     transform: translateX(-50%);
     transform-origin: -50%; }
     .contact-us .submit-form-button:hover {
       text-decoration: none; }
+  .contact-us form {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3rem; }
+  .contact-us .form-group {
+    margin-bottom: 0.5rem; }
 
 .footer {
   z-index: 100;
