@@ -1,0 +1,37 @@
+.App
+    height: 100vh
+
+    .background-img
+        position: absolute
+        width: 100vw
+        height: 100vh
+        background: url('./img/main-bg-2.jpg')
+        background-size: cover
+        background-position-x: 10rem
+        transition: 0.5s
+        // TODO maybe put this into a JS function?
+        @media screen and (max-width: 1600px)
+            background-position-y: 4rem
+        @media screen and (max-width: 1400px)
+            background-position-x: 7rem
+            background-position-y: 5rem
+        @media screen and (max-width: 1300px)
+            background-position-x: 2rem
+        @media screen and (max-width: 1200px)
+            background-position-x: -1rem
+        @media screen and (max-width: 1100px)
+            background-position-x: -3rem
+        @media screen and (max-width: 1000px)
+            background-position-x: -7rem
+
+
+.newBg
+    background: url('./img/32.jpg') !important
+    background-size: cover
+
+.app-container
+    position: absolute
+    z-index: 1001
+    top: 31%
+    -webkit-transform: translateY(-50%)
+    width: 100vw
