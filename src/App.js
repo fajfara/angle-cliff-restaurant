@@ -19,7 +19,17 @@ import Contact from './components/Contact';
 
 class App extends Component {
 
+  apiCall() {
+    const url = 'http://www.fajfar.tech/weather/kranj';
 
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+            console.log(myJson.data.weather[0]);
+        });
+  }
 
 
 
@@ -84,6 +94,7 @@ class App extends Component {
 
 
   render() {
+    this.apiCall();
     return (
       <BrowserRouter>
         <Route render={({ location }) =>
