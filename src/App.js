@@ -20,15 +20,15 @@ import Contact from './components/Contact';
 class App extends Component {
 
   apiCall() {
-    const url = 'https://www.fajfar.tech/weather/kranj';
+    const url = 'https://fajfar.tech/weather/kranj';
 
     fetch(url)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (myJson) {
-            console.log(myJson.data.weather[0]);
-        });
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson.data.weather[0]);
+      });
   }
 
 
