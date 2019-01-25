@@ -27,7 +27,7 @@ class App extends Component {
         return response.json();
       })
       .then(function (myJson) {
-        console.log(myJson.data.weather[0]);
+        console.log(myJson.weather.weather);
       });
   }
 
